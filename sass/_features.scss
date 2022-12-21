@@ -1,0 +1,35 @@
+.features {
+  &__container {
+    width: 84%;
+    margin: 0 auto;
+    padding-block: 10rem;
+    display: grid;
+    align-items: flex-end;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    row-gap: 9rem;
+    column-gap: 3rem;
+
+    @include respond(desktop) {
+      row-gap: 12rem;
+    }
+  }
+
+  &__card {
+    text-align: center;
+  }
+
+  &__card-img {
+    margin-inline: auto;
+  }
+
+  &__card-heading {
+    font-size: 1.9rem;
+    color: $black;
+    margin: 3rem 0 1.5rem;
+  }
+
+  &__card-text {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.63);
+  }
+}

@@ -1,0 +1,175 @@
+.packages {
+  padding-block: 10rem;
+
+  &__container {
+    width: 90%;
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+      gap: 5rem;
+    }
+
+    @include respond(desktop) {
+      gap: 3rem;
+    }
+  }
+
+  &__card {
+    background-color: #d3d3d341;
+    padding: 3rem 2rem 2rem;
+    text-align: center;
+    color: $black;
+
+    p {
+      color: rgba(0, 0, 0, 0.63);
+      font-size: 1.5rem;
+    }
+
+    @include respond(tab-port) {
+      text-align: left;
+    }
+  }
+
+  &__card-heading {
+    font-size: 2.6rem;
+    margin-bottom: 1rem;
+  }
+
+  &__card-price {
+    margin-top: 2rem;
+    font-size: 2.8rem;
+  }
+
+  &__card-btn {
+    color: $white;
+    text-transform: uppercase;
+    padding: 1.2rem 6.5rem;
+    background-color: $black;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+    margin-top: 3rem;
+
+    &:hover {
+      color: $black;
+      background-color: $light-gray;
+    }
+  }
+
+  @include respond(tab-port) {
+    &__card-container {
+      display: flex;
+      align-items: flex-start;
+      gap: 20%;
+    }
+  }
+
+  // <================ for second card ==================>
+
+  &__card:nth-child(2) {
+    background-color: $black;
+    color: $white;
+    transform: scaleY(110%);
+    position: relative;
+
+    @include respond(tab-port) {
+      transform: scaleX(100%);
+    }
+
+    &::before {
+      content: "";
+      width: 100%;
+      height: 0.6rem;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-image: $linear-gradient-2;
+
+      @include respond(tab-port) {
+        width: 0.8rem;
+        height: 100%;
+        background-image: $linear-gradient-1;
+      }
+    }
+
+    p {
+      color: $light-gray;
+    }
+
+    button {
+      background-color: $white;
+      color: $black;
+
+      &:hover {
+        background-color: $light-gray;
+      }
+    }
+  }
+
+  // <================ for plan switch button ==================>
+
+  &__button-container {
+    margin-bottom: 7rem;
+    display: flex;
+    width: fit-content;
+    margin-inline: auto;
+    gap: 1rem;
+    align-items: center;
+
+    p {
+      font-size: 2rem;
+      font-weight: 600;
+      color: $dark-gray;
+    }
+  }
+
+  &__switch {
+    width: 6.4rem;
+    height: 3.2rem;
+    background-color: $dark-gray;
+    border-radius: 50rem;
+    cursor: pointer;
+    padding-inline: 0.3rem;
+    display: flex;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+
+  &__dot {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: $black;
+    border-radius: 50%;
+    transition: all 0.5s ease;
+  }
+}
+
+// <================ classes for switch (javascript) ==================>
+.color {
+  color: $black !important;
+}
+
+.dot {
+  margin-left: 3.25rem;
+  background-color: $white;
+}
+
+.switch {
+  background-color: $black;
+}
+
+.yearly-plan {
+  display: none;
+}
+
+.display-html {
+  display: block;
+}
+
+.display-none {
+  display: none;
+}

@@ -1,0 +1,37 @@
+.stories {
+  &__container {
+    display: grid;
+    grid-template-columns: 55% 45%;
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__container-right {
+    background-color: $white;
+    display: grid;
+    align-items: center;
+  }
+
+  &__heading {
+    color: $black;
+    font-weight: 600;
+  }
+
+  &__container-left {
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    color: $black;
+
+    &::before {
+      background-color: $black;
+    }
+  }
+}

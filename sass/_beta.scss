@@ -1,0 +1,41 @@
+.beta {
+  &__container {
+    position: relative;
+    overflow-x: hidden;
+  }
+
+  &__img {
+    object-fit: cover;
+  }
+
+  &__text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 84%;
+    color: $white;
+    display: flex;
+    align-items: center;
+    gap: 20rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 4rem;
+      align-items: flex-start;
+    }
+  }
+
+  &__link {
+    width: 35rem;
+    color: $white;
+
+    &::before {
+      background-color: $white;
+    }
+
+    @include respond(tab-port) {
+      width: fit-content;
+    }
+  }
+}

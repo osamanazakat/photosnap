@@ -1,0 +1,68 @@
+.sh {
+  &__container {
+    position: relative;
+    height: 85vh;
+
+    @include respond(phone) {
+      height: 65vh;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__text-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 8%;
+    width: 40%;
+    color: $white;
+
+    @include respond(tab-port) {
+      width: 70%;
+    }
+
+    @include respond(phone) {
+      width: 90%;
+      letter-spacing: 4%;
+    }
+  }
+
+  &__featured {
+    letter-spacing: 2px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  &__heading {
+    letter-spacing: 2px;
+  }
+
+  &__pg {
+    margin-block: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color: $dark-gray;
+  }
+
+  &__date {
+    font-size: 1.2rem;
+
+    span {
+      font-weight: 800;
+    }
+  }
+
+  &__link {
+    color: $white;
+
+    &::before {
+      background-color: $white;
+    }
+  }
+}

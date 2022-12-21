@@ -1,0 +1,45 @@
+.design {
+  &__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    @include respond(tab-port) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__container-left {
+    background-color: $white;
+    display: grid;
+    align-items: center;
+
+    @include respond(tab-port) {
+      order: 2;
+    }
+  }
+
+  &__heading {
+    color: $black;
+    font-weight: 600;
+  }
+
+  &__container-right {
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    @include respond(tab-port) {
+      order: 1;
+    }
+  }
+
+  &__link {
+    color: $black;
+
+    &::before {
+      background-color: $black;
+    }
+  }
+}

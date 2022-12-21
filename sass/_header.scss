@@ -1,0 +1,100 @@
+.header {
+  width: 100%;
+  background-color: $white;
+
+  &__nav {
+    width: 84%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-block: 2.5rem;
+
+    @include respond(phone) {
+      padding-block: 2rem;
+      width: 90%;
+    }
+  }
+
+  &__logo {
+    @include respond(phone) {
+      width: 15rem;
+    }
+  }
+
+  &__nav-links {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 2rem;
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      width: 100%;
+      background-color: $white;
+      padding-block: 4rem;
+      display: none;
+      animation: moveInUp 0.4s linear;
+      z-index: 5;
+    }
+  }
+
+  &__nav-item {
+    color: $black;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    font-weight: 700;
+    transition: opacity 0.2s;
+    letter-spacing: 2px;
+
+    &:hover {
+      opacity: 60%;
+    }
+  }
+
+  &__btn {
+    color: $white;
+    text-transform: uppercase;
+    padding: 1.2rem 2.5rem;
+    background-color: $black;
+    cursor: pointer;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+
+    &:hover {
+      color: $black;
+      background-color: $light-gray;
+    }
+
+    @include respond(tab-port) {
+      width: 90%;
+      margin-top: 2rem;
+    }
+  }
+
+  &__menu-btns {
+    font-size: 3.5rem;
+    position: absolute;
+    right: 5%;
+    cursor: pointer;
+    color: $black;
+    display: none;
+
+    @include respond(tab-port) {
+      display: block;
+    }
+  }
+}
+
+// <================ for navbar ==================>
+
+.open {
+  display: flex;
+}
+
+#closeBtn {
+  display: none;
+}
